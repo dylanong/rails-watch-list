@@ -4,9 +4,13 @@
 
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
 
   <%= link_to "Back to movies", "movies_path" %>
+
+<%= cl_image_tag("cld-sample-2.jpg",
+      width: 400, height: 300, crop: :fill) %>
 
 </div>
